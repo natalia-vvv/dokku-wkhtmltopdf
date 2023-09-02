@@ -5,7 +5,7 @@ APP="$1"; IMAGE="dokku/$APP"
 echo "-----> Installing wkhtmltox ..."
 COMMAND=$(cat <<EOF
 apt-get -y  update 
-apt-get install -y wget xfonts-base xfonts-75dpi libssl1.0-dev openssl
+apt-get install -y wget xfonts-base xfonts-75dpi openssl
 cd /tmp && wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 echo "deb http://security.ubuntu.com/ubuntu/ bionic-security main" >> /etc/apt/sources.list
